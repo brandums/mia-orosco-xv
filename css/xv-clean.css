@@ -969,3 +969,32 @@ body.invitation-xv {
     padding: 16px 16px 14px;
   }
 }
+
+/* === Nitidez SVG artistas === */
+.v2-artistas-container.zoom-animar {
+  will-change: auto;
+}
+
+.v2-artista-logo {
+  display: block;
+  flex: 0 0 auto;
+  image-rendering: auto;
+  shape-rendering: geometricPrecision;
+}
+
+@media (max-width: 767px) {
+  .v2-artistas-container.zoom-animar {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: opacity .35s ease !important;
+  }
+
+  .v2-artistas-container {
+    gap: 18px !important;
+  }
+
+  .v2-artista-logo {
+    width: 96px !important;
+    height: 96px !important;
+  }
+}

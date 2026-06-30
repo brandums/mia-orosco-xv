@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+<svg shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="1350.000000pt" height="1165.000000pt" viewBox="0 0 1350.000000 1165.000000"
  preserveAspectRatio="xMidYMid meet">
 
@@ -13,16 +13,10 @@
       <stop offset="80%" style="stop-color:#D3D3D3;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#A9A9A9;stop-opacity:1" />
     </linearGradient>
-
-    <filter id="shineEffect" x="-10%" y="-10%" width="120%" height="120%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur" />
-      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 1  0 1 0 0 1  0 0 1 0 1  0 0 0 1 0" result="glow" />
-      <feComposite in="SourceGraphic" in2="glow" operator="over" />
-    </filter>
   </defs>
 
 <g transform="translate(0.000000,1165.000000) scale(0.100000,-0.100000)"
-fill="url(#polishedSilver)" filter="url(#shineEffect)" stroke="none">
+fill="url(#polishedSilver)" stroke="none">
 
 <path d="M3770 9674 c-240 -35 -407 -158 -507 -372 -67 -143 -66 -138 -69
 -851 -2 -464 -6 -651 -14 -672 -26 -61 -39 -63 -335 -70 -307 -6 -335 -12
