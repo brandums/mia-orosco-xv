@@ -2,15 +2,15 @@
   "use strict";
 
   const EVENT = {
-    title: "XV años de María Fernanda",
-    description: "Te espero para celebrar mis XV años.",
-    location: "Salon de Eventos Castrillo, Conchitas 569, La Paz",
-    start: "20260619T193000",
-    end: "20260620T010000",
+    title: "XV Mia Orosco",
+    description: "Te espero para celebrar mis XV anos.",
+    location: "La Terraza",
+    start: "20260801T220000Z",
+    end: "20260802T030000Z",
   };
 
   const WHATSAPP_NUMBER = "";
-  const PHOTO_LINK = "";
+  const PHOTO_LINK = "https://drive.google.com/";
 
   const $ = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => Array.from(scope.querySelectorAll(selector));
@@ -190,9 +190,21 @@
       button.setAttribute("href", "#");
       button.addEventListener("click", (event) => {
         event.preventDefault();
-        downloadCalendarFile();
+        window.open(buildGoogleCalendarUrl(), "_blank", "noopener");
       });
     });
+  }
+
+  function buildGoogleCalendarUrl() {
+    const params = new URLSearchParams({
+      action: "TEMPLATE",
+      text: EVENT.title,
+      dates: `${EVENT.start}/${EVENT.end}`,
+      details: EVENT.description,
+      location: EVENT.location,
+    });
+
+    return `https://calendar.google.com/calendar/render?${params.toString()}`;
   }
 
   function downloadCalendarFile() {
@@ -219,7 +231,7 @@
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "xv-maria-fernanda.ics";
+    link.download = "xv-mia-orosco.ics";
     document.body.appendChild(link);
     link.click();
     link.remove();
