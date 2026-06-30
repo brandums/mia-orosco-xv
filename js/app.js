@@ -211,7 +211,7 @@
     const ics = [
       "BEGIN:VCALENDAR",
       "VERSION:2.0",
-      "PRODID:-//VOGA Studios//Paper Floral XV//ES",
+      "PRODID:-//SAMIELLE STUDIO//Paper Floral XV//ES",
       "CALSCALE:GREGORIAN",
       "METHOD:PUBLISH",
       "BEGIN:VEVENT",
